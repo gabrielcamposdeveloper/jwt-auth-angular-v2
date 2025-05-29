@@ -57,5 +57,15 @@ Error: Can't resolve 'src/styles.css'
 3.
 
 **Backend**:
-Obs: Estou ciente que a vaga compete a desenvolvedor Frontend, entretanto para trabalhar de forma mais fiel a realidade, criei uma API simples em Express consumindo uma base de dados FAKE.
-1. Criação de uma estrutura para manipular o login com requisições reais.
+
+**Instrodução**
+Obs: Estou ciente que a vaga compete a desenvolvedor Frontend, entretanto para trabalhar de forma mais fiel a realidade, criei uma API simples em **Express** consumindo uma base de dados FAKE.
+1. Criação de uma estrutura para manipular o login gerar o token e devolver na requisição
+2. Instalçao do swgger para documentação e testes das api
+
+Swagger: http://localhost:5001/api/docs/
+
+**Como rodar localmente a API**
+1. Entrar na pasta API: cd .\API
+2. Instalar as dependências: 'npm i' ou 'npm install'
+3. Iniciar a API com o comando: 'npm run dev'
