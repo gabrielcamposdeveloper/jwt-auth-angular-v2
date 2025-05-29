@@ -1,4 +1,10 @@
-
 .home-container {
   margin: 2rem;
+  max-width: 600px;
+}
+
+p-chart {
+  display: block;
+  width: 100% !important;
+  height: 300px !important;
 }

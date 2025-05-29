@@ -1,5 +1,17 @@
-
 <div class="home-container">
   <h2>Dashboard</h2>
-  <p-chart type="bar" [data]="chartData"></p-chart>
+
+  <label for="tipo">Selecione o tipo de gráfico:</label>
+  <select id="tipo" [(ngModel)]="tipoGrafico" (change)="recriarGrafico()">
+    <option *ngFor="let tipo of tipos" [value]="tipo">{{ tipo }}</option>
+  </select>
+
+  <div style="width: 600px; height: 300px; margin-top: 1rem;" *ngIf="mostrarGrafico">
+    <p-chart
+      [type]="tipoGrafico"
+      [data]="chartData"
+      [options]="chartOptions"
+      [responsive]="true"
+    ></p-chart>
+  </div>
 </div>
