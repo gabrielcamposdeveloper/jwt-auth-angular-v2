@@ -1,16 +1,16 @@
-# Resumo do estado inicial da Aplicação
+# Resumo: Visão inicial
 - Sistema Baseado em Angular e Typescript
 - Telas presentes: Login, Home, Users.
 - **Login**: Apresenta um sistema de autenticação que utiliza o service "auth.service.ts" para fazer uma requisição que bem sucedida gera um token de autenticação, necessário para acessar via localStorage as outras páginas protegidas pelo "auth.guard.ts"
 - **Home**: Basicamente apresenta a ideia de um deshboard, representando as informações sobre usuários.
 - **users**: tela de listagem de usuários, mostrando em tabela o usuário e o email.
 
-# Correções iniciais necessárias
+# Correções iniciais
 
-**Observações iniciais**:
+**Observações**:
 Ao descompactar e abrir o projeto pela IDE constatei que haviam estruturas incompletas e problemas, dos quais impossibilitavam a inicialização do projeto
 
-## Problemas Iniciais:
+## Problemas:
 
 ### Situação #1. Falta das dependências**
 
