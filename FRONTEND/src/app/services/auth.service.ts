@@ -4,7 +4,7 @@ import { tap } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-  private api = 'https://localhost:5001/api/auth';
+  private api = 'http://localhost:5001/api/auth';
 
   constructor(private http: HttpClient) {}
 

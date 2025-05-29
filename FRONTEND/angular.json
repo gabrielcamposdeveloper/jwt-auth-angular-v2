@@ -25,20 +25,40 @@
               "node_modules/primeng/resources/primeng.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "sourceMap": true
+          },
+          "configurations": {
+            "production": {
+              "sourceMap": false,
+              "optimization": true,
+              "outputHashing": "all",
+            
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            },
+            "development": {
+              "sourceMap": true,
+              "optimization": false,
+              "namedChunks": true,
+              "vendorChunk": true,
+              "buildOptimizer": false
+            }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jwt-auth-angular:build"
+            "browserTarget": "jwt-auth-angular:build:development"
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": false,
-    "defaultProject": "jwt-auth-angular"
+    "analytics": false
+    
   }
 }
