@@ -48,3 +48,14 @@ File 'src/polyfills.ts' not found
 
 - O arquivo styles.css também não estava presente na criação do projeto, sendo assim foi necessário cria-lo, para fazer utilização desse arquivo global/genérico que será importante para definirmos os estilos.
 Error: Can't resolve 'src/styles.css'
+
+### Melhorias
+
+**Frontend**:
+1.
+2.
+3.
+
+**Backend**:
+Obs: Estou ciente que a vaga compete a desenvolvedor Frontend, entretanto para trabalhar de forma mais fiel a realidade, criei uma API simples em Express consumindo uma base de dados FAKE.
+1. Criação de uma estrutura para manipular o login com requisições reais.
