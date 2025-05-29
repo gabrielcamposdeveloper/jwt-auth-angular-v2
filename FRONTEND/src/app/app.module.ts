@@ -15,6 +15,7 @@ import { ChartModule } from 'primeng/chart';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ButtonModule } from 'primeng/button';
     HttpClientModule,
     FormsModule,
     ChartModule,
+    AutoCompleteModule,
     TableModule,
     InputTextModule,
     ButtonModule

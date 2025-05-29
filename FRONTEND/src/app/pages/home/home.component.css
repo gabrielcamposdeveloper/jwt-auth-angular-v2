@@ -1,10 +1,46 @@
 .home-container {
   margin: 2rem;
-  max-width: 600px;
+  font-family: Arial, sans-serif;
 }
 
-p-chart {
-  display: block;
-  width: 100% !important;
-  height: 300px !important;
+.cards-grid {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #007ad9;
+}
+
+.grafico-container {
+  margin-top: 2rem;
+}
+
+.grafico-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grafico-area {
+  width: 100%;
+  max-width: 800px;
 }
