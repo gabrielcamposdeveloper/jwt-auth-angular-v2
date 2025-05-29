@@ -4,14 +4,8 @@ import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
-  template: `
-    <div class="p-4">
-      <h2>Login</h2>
-      <input [(ngModel)]="username" placeholder="Login" pInputText />
-      <input [(ngModel)]="password" placeholder="Senha" type="password" pInputText />
-      <button (click)="login()" pButton label="Entrar"></button>
-    </div>
-  `
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
   username = '';
