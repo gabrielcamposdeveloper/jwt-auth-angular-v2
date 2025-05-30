@@ -1,4 +1,11 @@
-
 .users-container {
-  margin: 2rem;
+  padding: 1rem;
+}
+
+.linha-par {
+  background-color: #ffffff;
+}
+
+.linha-impar {
+  background-color: #f9f9f9;
 }

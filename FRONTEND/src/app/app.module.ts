@@ -37,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TableModule,
     InputTextModule,
     ButtonModule,
-    DropdownModule
+    DropdownModule,
+    TableModule
   ],
   providers: [
     AuthService,
