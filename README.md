@@ -57,7 +57,7 @@ Error: Can't resolve 'src/styles.css'
 - Estilização e responsividade.
 
 2. Home:
-- Recurso para alterar em tempo real o tipo de gráfico desejado (Pizza, Barra, etc.)
+- Recurso para alterar em tempo real o tipo de gráfico desejado (Pizza, Barra, etc.), atravez de um Input de seleção PrimeNg
 - 
 
 3. User:
@@ -69,7 +69,9 @@ Error: Can't resolve 'src/styles.css'
 
 **Instrodução**
 Obs: Estou ciente que a vaga compete a desenvolvedor Frontend, entretanto para trabalhar de forma mais fiel a realidade, criei uma API simples em **Express** consumindo uma base de dados FAKE.
-1. Criação de uma estrutura para manipular o login gerar o token e devolver na requisição
+1. Foram desenvolvidos Enpoints da Api: 
+- Estrutura para manipular o login gerar o token e devolver na requisição
+- Estrutura para buscar lista de usuários
 2. Instalçao do swgger para documentação e testes das api
 
 Swagger: http://localhost:5001/api/docs/
