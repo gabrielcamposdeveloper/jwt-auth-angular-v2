@@ -20,21 +20,22 @@
     </div>
   </div>
 
-  <div class="grafico-container">
-     <label for="tipo">Selecione o tipo de gráfico:</label>
-  <select id="tipo" [(ngModel)]="tipoGrafico" (change)="recriarGrafico()">
-    <option *ngFor="let tipo of tipos" [value]="tipo">{{ tipo }}</option>
-  </select>
+  <p-dropdown
+  [options]="tiposDropdown"
+  [(ngModel)]="tipoGrafico"
+  optionLabel="label"
+  placeholder="Selecione"
+  (onChange)="recriarGrafico($event)">
+</p-dropdown>
 
+<div class="grafico-area" *ngIf="mostrarGrafico">
+  <h2>Dados dos usuários: acessos e horas de uso mensais/semanais</h2>
+  <p-chart
+    [type]="tipoGrafico"
+    [data]="chartData"
+    [options]="chartOptions"
+    [responsive]="true">
+  </p-chart>
+</div>
 
-    <div class="grafico-area" *ngIf="mostrarGrafico">
-      <h2>Dados dos usuários: acessos e horas de uso mensais/semanais</h2>
-      <p-chart
-        [type]="tipoGrafico"
-        [data]="chartData"
-        [options]="chartOptions"
-        [responsive]="true"
-      ></p-chart>
-    </div>
-  </div>
 </div>

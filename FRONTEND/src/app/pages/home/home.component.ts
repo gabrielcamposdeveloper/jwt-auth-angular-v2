@@ -6,10 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  tipoGrafico = 'bar';
-  mostrarGrafico = true;
+ 
+mostrarGrafico = true;
+tipoGrafico: string = 'bar';
 
-  tipos = ['bar', 'line', 'radar', 'doughnut', 'pie'];
+tiposDropdown = [
+  { label: 'Barra', value: 'bar' },
+  { label: 'Linha', value: 'line' },
+  { label: 'Radar', value: 'radar' },
+  { label: 'Rosca (Doughnut)', value: 'doughnut' },
+  { label: 'Pizza', value: 'pie' }
+];
+
   tiposFiltrados: string[] = [];
 
   chartData = {
@@ -38,21 +46,15 @@ export class HomeComponent {
     maintainAspectRatio: false
   };
 
-  filtrarTipos(event: any) {
-    const query = event.query.toLowerCase();
-    this.tiposFiltrados = this.tipos.filter(tipo =>
-      tipo.toLowerCase().includes(query)
-    );
-  }
+recriarGrafico(event: any) {
+  this.tipoGrafico = event.value.value;
+  this.mostrarGrafico = false;
 
-  
-
-  recriarGrafico() {
-    this.mostrarGrafico = false;
-    setTimeout(() => {
-      this.mostrarGrafico = true;
-    }, 0);
-  }
+  setTimeout(() => {
+    this.chartData = JSON.parse(JSON.stringify(this.chartData));
+    this.mostrarGrafico = true;
+  }, 50);
+}
 
 
 }

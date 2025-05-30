@@ -16,6 +16,8 @@ import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import { DropdownModule } from 'primeng/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     UsersComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -33,7 +36,8 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     AutoCompleteModule,
     TableModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    DropdownModule
   ],
   providers: [
     AuthService,
