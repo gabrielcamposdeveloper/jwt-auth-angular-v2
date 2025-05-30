@@ -8,6 +8,10 @@
 2. Instalar as dependências: 'npm i' ou 'npm install'
 3. Iniciar o projeto com o comando: 'ng Serve'
 
+**Acesso Sistema**
+- Login: admin
+- senha: 1234
+
 # Resumo: Visão inicial
 - Sistema Baseado em Angular e Typescript
 - Telas presentes: Login, Home, Users.
