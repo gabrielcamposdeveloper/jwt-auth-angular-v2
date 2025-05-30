@@ -1,3 +1,13 @@
+**Como rodar localmente a API**
+1. Entrar na pasta API: cd .\API
+2. Instalar as dependências: 'npm i' ou 'npm install'
+3. Iniciar a API com o comando: 'npm run dev'
+
+**Como rodar localmente o proejto angular**
+1. Entrar na pasta FRONTEND: cd .\FRONTEND
+2. Instalar as dependências: 'npm i' ou 'npm install'
+3. Iniciar o projeto com o comando: 'ng Serve'
+
 # Resumo: Visão inicial
 - Sistema Baseado em Angular e Typescript
 - Telas presentes: Login, Home, Users.
@@ -54,16 +64,17 @@ Error: Can't resolve 'src/styles.css'
 **Frontend**:
 1. Login:
 - Criação da conexão com backend para autenticar o acesso
-- Estilização e responsividade.
+- Nova estilização e responsividade da tela.
+- Mensagem de validação para caso de login incorreto.
 
 2. Home:
 - Recurso para alterar em tempo real o tipo de gráfico desejado (Pizza, Barra, etc.), atravez de um Input de seleção PrimeNg
-- 
+- Novos indicadores práticos para visualizar informações importantes como total de acessos, horas acessadas no mês/semana.
 
 3. User:
-- 
-- 
-- 
+- Criação de uma tabela utilizando melhor os recursos da PrimeNg como filtros, paginação personalizada, filtros de ordenação e busca por pesquisa.
+- Nova estilização com linhas zebradas para facilitar visualização das informações
+- Dados capturados diretamente do endpoint criado em express
 
 **Backend**:
 
@@ -76,7 +87,4 @@ Obs: Estou ciente que a vaga compete a desenvolvedor Frontend, entretanto para t
 
 Swagger: http://localhost:5001/api/docs/
 
-**Como rodar localmente a API**
-1. Entrar na pasta API: cd .\API
-2. Instalar as dependências: 'npm i' ou 'npm install'
-3. Iniciar a API com o comando: 'npm run dev'
+

@@ -14,14 +14,15 @@ export class LoginComponent {
 
   constructor(private auth: AuthService, private router: Router) {}
 
-   login() {
-    this.errorMessage = '';
-    this.auth.login(this.username, this.password).subscribe({
-      next: () => this.router.navigate(['/home']),
-      error: (err) => {
-        this.errorMessage = 'Usuário ou senha inválidos';
-        console.error('Erro de login:', err);
-      }
-    });
-  }
+ login() {
+  this.errorMessage = '';
+  this.auth.login(this.username, this.password).subscribe({
+    next: () => this.router.navigate(['/home']),
+    error: (err) => {
+      this.errorMessage = 'Usuário ou senha inválidos';
+      console.error('Erro de login:', err);
+    }
+  });
+}
+
 }

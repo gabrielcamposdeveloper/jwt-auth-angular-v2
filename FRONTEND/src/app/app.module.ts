@@ -18,7 +18,9 @@ import { ButtonModule } from 'primeng/button';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { DropdownModule } from 'primeng/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
+import { MessageModule } from 'primeng/message';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    PasswordModule,
+    DividerModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
@@ -36,6 +40,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AutoCompleteModule,
     TableModule,
     InputTextModule,
+    MessageModule,
     ButtonModule,
     DropdownModule,
     TableModule

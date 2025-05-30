@@ -4,6 +4,10 @@
     <p>Entre com suas credenciais</p>
 
     <div class="p-fluid">
+      <div *ngIf="errorMessage" class="p-field">
+        <p-message severity="error" [text]="errorMessage"></p-message>
+      </div>
+
       <div class="p-field">
         <label for="username">Login</label>
         <input id="username" [(ngModel)]="username" pInputText placeholder="Digite seu login" />
@@ -14,7 +18,13 @@
         <input id="password" type="password" [(ngModel)]="password" pInputText placeholder="Digite sua senha" />
       </div>
 
-      <button (click)="login()" pButton type="button" label="Entrar" class="p-button-rounded p-button-lg"></button>
+      <button 
+        (click)="login()" 
+        pButton 
+        type="button" 
+        label="Entrar" 
+        class="p-button-rounded p-button-lg">
+      </button>
     </div>
   </div>
 </div>
