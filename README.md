@@ -49,12 +49,21 @@ File 'src/polyfills.ts' not found
 - O arquivo styles.css também não estava presente na criação do projeto, sendo assim foi necessário cria-lo, para fazer utilização desse arquivo global/genérico que será importante para definirmos os estilos.
 Error: Can't resolve 'src/styles.css'
 
-### Melhorias
+### Melhorias Desenvolvidas
 
 **Frontend**:
-1.
-2.
-3.
+1. Login:
+- Criação da conexão com backend para autenticar o acesso
+- Estilização e responsividade.
+
+2. Home:
+- Recurso para alterar em tempo real o tipo de gráfico desejado (Pizza, Barra, etc.)
+- 
+
+3. User:
+- 
+- 
+- 
 
 **Backend**:
 
