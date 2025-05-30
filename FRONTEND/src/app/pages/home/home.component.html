@@ -1,32 +1,26 @@
 <div class="home-container">
   <h1>Dashboard</h1>
 
-  <div class="cards-grid">
-    <div class="card">
-      <h3>Total de Acessos</h3>
-      <p>22</p>
-    </div>
-    <div class="card">
-      <h3>Horas Semanais</h3>
-      <p>30</p>
-    </div>
-    <div class="card">
-      <h3>Horas Mensais</h3>
-      <p>60</p>
-    </div>
-    <div class="card">
-      <h3>Usuários Ativos</h3>
-      <p>3</p>
-    </div>
+<div class="cards-grid">
+  <div class="card" *ngFor="let card of cards">
+    <h3>{{ card.title }}</h3>
+    <p>{{ card.value }}</p>
   </div>
+</div>
 
+<div class="dropdown-area">
+  <label for="tipoGrafico">Escolha o tipo de gráfico:</label>
   <p-dropdown
-  [options]="tiposDropdown"
-  [(ngModel)]="tipoGrafico"
-  optionLabel="label"
-  placeholder="Selecione"
-  (onChange)="recriarGrafico($event)">
-</p-dropdown>
+    id="tipoGrafico"
+    [options]="tiposDropdown"
+    [(ngModel)]="tipoGrafico"
+    optionLabel="label"
+    [placeholder]="labelGrafico"
+    (onChange)="recriarGrafico($event)">
+  </p-dropdown>
+</div>
+
+
 
 <div class="grafico-area" *ngIf="mostrarGrafico">
   <h2>Dados dos usuários: acessos e horas de uso mensais/semanais</h2>

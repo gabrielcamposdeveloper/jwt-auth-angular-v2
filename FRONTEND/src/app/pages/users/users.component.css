@@ -1,11 +1,75 @@
 .users-container {
+  max-width: auto;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 1rem;
 }
 
+h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  margin: 50px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.table-container {
+  margin: 50px;
+  height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.p-table {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.p-table thead tr th {
+  background-color: #2575fc;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+}
+
+.p-table tbody tr td {
+  padding: 0.75rem 1rem;
+  color: #444;
+}
+
 .linha-par {
-  background-color: #ffffff;
+  background-color: #f9f9f9;
 }
 
 .linha-impar {
-  background-color: #f9f9f9;
+  background-color: #fff;
+}
+
+.p-input-icon-left {
+  margin-bottom: 1.5rem;
+  width: 300px;
+}
+
+.p-input-icon-left i {
+  color: #777;
+  font-size: 1.2rem;
+}
+
+.p-input-icon-left input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  padding-left: 2rem;
+}
+
+.p-input-icon-left input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
+  outline: none;
 }

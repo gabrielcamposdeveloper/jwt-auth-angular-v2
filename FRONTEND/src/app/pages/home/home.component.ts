@@ -6,9 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
- 
-mostrarGrafico = true;
-tipoGrafico: string = 'bar';
+  
+  mostrarGrafico = true;
+  tipoGrafico: string = 'bar';
+  labelGrafico: string = 'barra'
+
+ cards = [
+    { title: 'Total de Acessos', value: 22 },
+    { title: 'Horas Semanais', value: 30 },
+    { title: 'Horas Mensais', value: 60 },
+    { title: 'Usuários Ativos', value: 3 },
+  ];
 
 tiposDropdown = [
   { label: 'Barra', value: 'bar' },
@@ -17,6 +25,7 @@ tiposDropdown = [
   { label: 'Rosca (Doughnut)', value: 'doughnut' },
   { label: 'Pizza', value: 'pie' }
 ];
+
 
   tiposFiltrados: string[] = [];
 
@@ -48,6 +57,7 @@ tiposDropdown = [
 
 recriarGrafico(event: any) {
   this.tipoGrafico = event.value.value;
+  this.labelGrafico = event.value.label;
   this.mostrarGrafico = false;
 
   setTimeout(() => {
