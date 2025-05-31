@@ -4,14 +4,16 @@
   <h1>Dashboard</h1>
 
   <div class="cards-grid">
-    <div class="card" *ngFor="let card of cards">
+    <div class="card" *ngFor="let card of cards" [title]="card.tooltip">
+      <i [class]="'pi ' + card.icon + ' icon-card'"></i>
       <h3>{{ card.title }}</h3>
       <p>{{ card.value }}</p>
     </div>
   </div>
 
+ <div class="actions-bar" *ngIf="mostrarGrafico">
   <div class="dropdown-area">
-    <label for="tipoGrafico">Escolha o tipo de gráfico:</label>
+    <label for="tipoGrafico">Tipo do gráfico:</label>
     <p-dropdown
       id="tipoGrafico"
       [options]="tiposDropdown"
@@ -23,7 +25,26 @@
     </p-dropdown>
   </div>
 
-  <div class="grafico-area" *ngIf="mostrarGrafico">
+  <div class="export-buttons">
+    <p-button 
+      label="Exportar PNG" 
+      icon="pi pi-image" 
+      (onClick)="exportToPNG()" 
+      styleClass="p-button-outlined p-button-secondary">
+    </p-button>
+
+    <p-button 
+      label="Exportar PDF" 
+      icon="pi pi-file-pdf" 
+      (onClick)="exportToPDF()" 
+      styleClass="p-button-outlined p-button-danger ml-2">
+    </p-button>
+  </div>
+</div>
+
+
+
+  <div class="grafico-area" #graficoRef *ngIf="mostrarGrafico">
     <h2>Dados dos usuários: acessos e horas de uso mensais/semanais</h2>
     <p-chart
       [type]="tipoGrafico"

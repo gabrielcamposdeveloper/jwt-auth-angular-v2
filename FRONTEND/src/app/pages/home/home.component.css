@@ -1,6 +1,6 @@
 .home-container {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 30px auto;
   padding: 0 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -69,10 +69,6 @@ h1 {
 }
 
 .dropdown-area {
-  margin-bottom: 24px;
-}
-
-.dropdown-area {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -82,4 +78,18 @@ h1 {
 .dropdown-area label {
   font-weight: 600;
   white-space: nowrap;
+}
+
+.actions-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+
+
+.export-buttons {
+  display: flex;
+  gap: 0.75rem;
 }
