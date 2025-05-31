@@ -21,6 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 import { MessageModule } from 'primeng/message';
+import { SharedModule } from './shared/shared.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +31,7 @@ import { MessageModule } from 'primeng/message';
     UsersComponent
   ],
   imports: [
+    SharedModule,
     BrowserAnimationsModule,
     BrowserModule,
     PasswordModule,
