@@ -1,4 +1,3 @@
-
 # Resumo: Visão inicial 📋
 
 - Sistema Baseado em Angular e Typescript, com utilização de estilização css e componentes da biblioteca **PRIME NG** (Gráficos, tabelas, botões, inputs, etc.)
@@ -77,7 +76,8 @@ Can't resolve 'src/styles.css'
 - Nova estilização e responsividade da tela;
 - Envio da senha e username criptografado em base 64 para aumentar a segurança de informações sensíveis;
 - Mensagem de validação para caso de login incorreto;
-![Tela de Login do Sistema](evidências/Login.png)
+  
+![Tela de Login do Sistema](Evidências/Login.png)
 
 📌 Home:
 
@@ -85,6 +85,8 @@ Can't resolve 'src/styles.css'
 - Recurso para alterar em tempo real o tipo de gráfico desejado (Pizza, Barra, etc.), atravez de um Input de seleção PrimeNg;
 - Novos indicadores práticos para visualizar informações importantes como total de acessos, horas acessadas no mês/semana.
 - Possibilidade de exportação do gráfico da em PNG ou PDF, em qualquer tipo de gráfico.
+  
+![Tela de Dashboard](Evidências/Dashboard.png)
 
 📌 User:
 
@@ -93,6 +95,8 @@ Can't resolve 'src/styles.css'
 - Dados capturados diretamente do endpoint criado em express;
 - Exportação csv da tabela de listagem dos usuários;
 - Aumento da massa de dados de usuários, apresentando novas informações como Nome Completo;
+  
+![Tela de Dashboard](Evidências/Dashboard.png)
 
 **Backend**:
 
