@@ -4,14 +4,36 @@
   <h2>Usuários</h2>
 
   <div class="table-card">
-    <div class="p-input-icon-left search-input">
-      <i class="pi pi-search"></i>
-      <input
-        type="text"
-        pInputText
-        placeholder="Pesquisar..."
-        (input)="table.filterGlobal($event.target.value, 'contains')"
-      />
+    <div
+      class="toolbar"
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+      "
+    >
+      <div
+        class="p-input-icon-left search-input"
+        style="flex-grow: 1; max-width: 300px"
+      >
+        <i class="pi pi-search"></i>
+        <input
+          type="text"
+          pInputText
+          placeholder="Pesquisar..."
+          (input)="table.filterGlobal($event.target.value, 'contains')"
+        />
+      </div>
+
+      <div class="export-buttons">
+        <p-button
+          label="Exportar CSV"
+          icon="pi pi-file"
+          (onClick)="exportarCSVManual()"
+          styleClass="p-button-outlined p-button-primary"
+        ></p-button>
+      </div>
     </div>
 
     <p-table
@@ -34,6 +56,9 @@
             Login <p-sortIcon field="username"></p-sortIcon>
           </th>
           <th pSortableColumn="email">
+            Nome completo <p-sortIcon field="fullName"></p-sortIcon>
+          </th>
+          <th pSortableColumn="email">
             Email <p-sortIcon field="email"></p-sortIcon>
           </th>
         </tr>
@@ -42,6 +67,7 @@
       <ng-template pTemplate="body" let-user let-rowIndex="rowIndex">
         <tr [ngClass]="rowIndex % 2 === 0 ? 'linha-par' : 'linha-impar'">
           <td>{{ user.username }}</td>
+          <td>{{ user.fullName }}</td>
           <td>{{ user.email }}</td>
         </tr>
       </ng-template>

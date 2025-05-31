@@ -75,23 +75,27 @@ _Erro_: Unable to load schema from 'c:\Workspace\jwt-auth-angular-v2\node_module
 **Frontend**:
 
 1. Geral:
+
 - Criação de um modulo shared para criação e utilização de componentes úteis em mais de um ponto do projeto.
 - Component navbar, com a possibilidade de navegar para as páginas de home e users, além de também poder deslogar o usuário, removendo o token da local storage.
 - Criação de um service para coleta dos usuários "user.service.ts"
 
 2. Login:
+
 - autenticação do acesso diretamente conectado com o endpoint criado em express;
 - Nova estilização e responsividade da tela;
 - Envio da senha e username criptografado em base 64 para aumentar a segurança de informações sensíveis;
 - Mensagem de validação para caso de login incorreto;
 
 3. Home:
+
 - Transformação da Home em um verdadeiro dashboard, aumentando o foco em apresentar os indicadores e ser intuitivo.
 - Recurso para alterar em tempo real o tipo de gráfico desejado (Pizza, Barra, etc.), atravez de um Input de seleção PrimeNg
 - Novos indicadores práticos para visualizar informações importantes como total de acessos, horas acessadas no mês/semana.
 - Possibilidade de exportação do gráfico da em PNG ou PDF, em qualquer tipo de gráfico.
 
 4. User:
+
 - Criação de uma tabela utilizando melhor os recursos da PrimeNg como filtros, paginação personalizada, filtros de ordenação e busca por pesquisa;
 - Nova estilização com linhas zebradas para facilitar visualização das informações;
 - Dados capturados diretamente do endpoint criado em express;
