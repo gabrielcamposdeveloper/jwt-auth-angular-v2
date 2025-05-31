@@ -10,9 +10,11 @@ interface User {
 
 const fakeUser: User = {
   id: 1,
-  username: 'admin',
-  password: '1234',
+  username: "YWRtaW4=",
+  password: "MTIzNA==", 
 };
+
+
 
 export class AuthService {
   //Faz o login validando username e password. Se positivo retorna um token jwt

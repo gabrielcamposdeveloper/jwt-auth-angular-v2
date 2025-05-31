@@ -14,15 +14,24 @@ export class LoginComponent {
 
   constructor(private auth: AuthService, private router: Router) {}
 
- login() {
-  this.errorMessage = '';
-  this.auth.login(this.username, this.password).subscribe({
-    next: () => this.router.navigate(['/home']),
-    error: (err) => {
-      this.errorMessage = 'Usuário ou senha inválidos';
-      console.error('Erro de login:', err);
-    }
-  });
-}
+  private encodeToBase64(str: string): string {
+    const utf8Bytes = new TextEncoder().encode(str);
+    const base64String = btoa(String.fromCharCode(...utf8Bytes));
+    return base64String;
+  }
 
+  login() {
+    this.errorMessage = '';
+
+    const encodedUsername = this.encodeToBase64(this.username);
+    const encodedPassword = this.encodeToBase64(this.password);
+console.log(encodedUsername, encodedPassword)
+    this.auth.login(encodedUsername, encodedPassword).subscribe({
+      next: () => this.router.navigate(['/home']),
+      error: (err) => {
+        this.errorMessage = 'Usuário ou senha inválidos';
+        console.error('Erro de login:', err);
+      }
+    });
+  }
 }
