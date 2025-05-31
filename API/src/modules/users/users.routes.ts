@@ -1,5 +1,5 @@
-import { Router } from 'express';
-import { UsersController } from './users.controller';
+import { Router } from "express";
+import { UsersController } from "./users.controller";
 
 const router = Router();
 const controller = new UsersController();
@@ -29,6 +29,6 @@ const controller = new UsersController();
  *                   fullName:
  *                     type: string
  */
-router.get('/', controller.getUsers);
+router.get("/", controller.getUsers);
 
 export default router;

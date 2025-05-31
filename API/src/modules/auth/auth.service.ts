@@ -1,6 +1,6 @@
-import jwt from 'jsonwebtoken';
+import jwt from "jsonwebtoken";
 
-const SECRET = process.env.JWT_SECRET || 'segredo_supersecreto';
+const SECRET = process.env.JWT_SECRET || "segredo_supersecreto";
 
 interface User {
   id: number;
@@ -11,18 +11,20 @@ interface User {
 const fakeUser: User = {
   id: 1,
   username: "YWRtaW4=",
-  password: "MTIzNA==", 
+  password: "MTIzNA==",
 };
-
-
 
 export class AuthService {
   //Faz o login validando username e password. Se positivo retorna um token jwt
   login(username: string, password: string): string | null {
     if (username === fakeUser.username && password === fakeUser.password) {
-      const token = jwt.sign({ id: fakeUser.id, username: fakeUser.username }, SECRET, {
-        expiresIn: '1h',
-      });
+      const token = jwt.sign(
+        { id: fakeUser.id, username: fakeUser.username },
+        SECRET,
+        {
+          expiresIn: "1h",
+        },
+      );
       return token;
     }
     return null;

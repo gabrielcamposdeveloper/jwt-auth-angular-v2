@@ -1,35 +1,30 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './pages/login/login.component';
-import { HomeComponent } from './pages/home/home.component';
-import { UsersComponent } from './pages/users/users.component';
-import { AuthService } from './services/auth.service';
-import { AuthGuard } from './guards/auth.guard';
-import { TokenInterceptor } from './services/token.interceptor';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
+import { LoginComponent } from "./pages/login/login.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { UsersComponent } from "./pages/users/users.component";
+import { AuthService } from "./services/auth.service";
+import { AuthGuard } from "./guards/auth.guard";
+import { TokenInterceptor } from "./services/token.interceptor";
 
-import { ChartModule } from 'primeng/chart';
-import { TableModule } from 'primeng/table';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { AutoCompleteModule } from 'primeng/autocomplete';
-import { DropdownModule } from 'primeng/dropdown';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PasswordModule } from 'primeng/password';
-import { DividerModule } from 'primeng/divider';
-import { MessageModule } from 'primeng/message';
-import { SharedModule } from './shared/shared.module';
+import { ChartModule } from "primeng/chart";
+import { TableModule } from "primeng/table";
+import { InputTextModule } from "primeng/inputtext";
+import { ButtonModule } from "primeng/button";
+import { AutoCompleteModule } from "primeng/autocomplete";
+import { DropdownModule } from "primeng/dropdown";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { PasswordModule } from "primeng/password";
+import { DividerModule } from "primeng/divider";
+import { MessageModule } from "primeng/message";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    HomeComponent,
-    UsersComponent
-  ],
+  declarations: [AppComponent, LoginComponent, HomeComponent, UsersComponent],
   imports: [
     SharedModule,
     BrowserAnimationsModule,
@@ -46,13 +41,13 @@ import { SharedModule } from './shared/shared.module';
     MessageModule,
     ButtonModule,
     DropdownModule,
-    TableModule
+    TableModule,
   ],
   providers: [
     AuthService,
     AuthGuard,
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

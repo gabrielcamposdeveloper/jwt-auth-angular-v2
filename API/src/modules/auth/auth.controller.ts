@@ -1,5 +1,5 @@
-import { Request, Response } from 'express';
-import { AuthService } from './auth.service';
+import { Request, Response } from "express";
+import { AuthService } from "./auth.service";
 
 export class AuthController {
   private authService: AuthService;
@@ -14,10 +14,10 @@ export class AuthController {
 
     const token = this.authService.login(username, password);
     if (!token) {
-      res.status(401).json({ message: 'Usuário ou senha inválidos' });
+      res.status(401).json({ message: "Usuário ou senha inválidos" });
       return;
     }
 
     res.json({ token });
-  }
+  };
 }
