@@ -77,6 +77,7 @@ Can't resolve 'src/styles.css'
 - Nova estilização e responsividade da tela;
 - Envio da senha e username criptografado em base 64 para aumentar a segurança de informações sensíveis;
 - Mensagem de validação para caso de login incorreto;
+![Tela de Login do Sistema](evidências/Login.png)
 
 📌 Home:
 
@@ -114,8 +115,8 @@ Obs: Estou ciente que a vaga compete a desenvolvedor Frontend, entretanto para t
 3. **Base de Dados Real**: Substituir a base fake por um banco relacional/NoSQL para persistência real e maior riqueza de dados (ex.: datas de cadastro, histórico de login, perfil detalhado).
 4. **CRUD Completo na Tela de Usuários**: Permitir criação, edição e exclusão lógica (soft delete) de usuários, garantindo conformidade com boas práticas de segurança e LGPD.
 5. **Autenticação e Segurança**: Evoluir para JWT, implementação de refresh token e roles/permissions para controle de acesso granular.
-6.** Organização dos modulos para escalabilidade**: Criar modulos específicos para cada estrutura, página desse modo é possível otimizar o que será importado para uso, evitando importaçãoes desnecessárias.
-7.** Implementações de intefaces**: Criar interfaces para formar os objetos com seus devidos tipos, consolidando as estruturas e evitando erros e inconsistências na manipulação dos dados.
+6. **Organização dos modulos para escalabilidade**: Criar modulos específicos para cada estrutura, página desse modo é possível otimizar o que será importado para uso, evitando importaçãoes desnecessárias.
+7. **Implementações de intefaces**: Criar interfaces para formar os objetos com seus devidos tipos, consolidando as estruturas e evitando erros e inconsistências na manipulação dos dados.
 
 # Instalação e execução do projeto 
 #### Como rodar localmente a API
