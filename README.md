@@ -1,9 +1,21 @@
-# Resumo: Visão inicial 📋
+# Resumo: Visão do estado inicial 📋
 
 - Sistema Baseado em Angular e Typescript, com utilização de estilização css e componentes da biblioteca **PRIME NG** (Gráficos, tabelas, botões, inputs, etc.)
 - **Login**: Apresenta um sistema de autenticação que utiliza o service "auth.service.ts" para fazer uma requisição que bem sucedida gera um token JWT de autenticação, necessário para acessar via localStorage as outras páginas protegidas pelo "auth.guard.ts"
 - **Home**: Basicamente apresenta a ideia de um deshboard, representando as informações sobre usuários.
 - **Users**: tela de listagem de usuários, mostrando em tabela o usuário e o email.
+
+**Pontos fortes**:
+- Iniciativa de utilização de um sistema de autenticação JWT Via Token, com guard que autentica realmente a segurança nas demais telas,
+- Utilização de ferramentas potentes atualmente no mercado para mecanismos de gráficos e tabelas
+
+**Pontos fracos e defeitos**:
+- Modularização do projeto básica (Único módulo para controlar tudo)
+- Falta de utilização de um service para busca de usuários.
+- Massa de dados para utilização muito fraca, não apresenta detalhes ou precisão para criação de indicadores/gráficos
+- Aplicação incorreta de estilização, estruturas de template do projeto, arquvios de configuração ausentes.
+- Estilização despadronizada, sem alinhamentos e margens.
+- Falta da possibilidade de navegação atraves de recursos em tela.
 
 # Correções iniciais 🔧
 
