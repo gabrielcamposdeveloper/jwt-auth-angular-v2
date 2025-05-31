@@ -108,7 +108,7 @@ Can't resolve 'src/styles.css'
 - Exportação csv da tabela de listagem dos usuários;
 - Aumento da massa de dados de usuários, apresentando novas informações como Nome Completo;
   
-![Tela de Dashboard](Evidências/Dashboard.png)
+![Tela de Dashboard](Evidências/Usuarios.png)
 
 **Backend**:
 
