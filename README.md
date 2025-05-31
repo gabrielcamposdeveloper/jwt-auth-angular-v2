@@ -70,7 +70,7 @@ Error: Can't resolve 'src/styles.css'
 1. Geral:
 - Criação de um modulo shared para criação e utilização de componentes úteis em mais de um ponto do projeto.
 - Component navbar, com a possibilidade de navegar para as páginas de home e users, além de também poder deslogar o usuário, removendo o token da local storage.
--
+- Criação de um service para coleta dos usuários "user.service.ts"
 
 2. Login:
 - autenticação do acesso diretamente conectado com o endpoint criado em express;

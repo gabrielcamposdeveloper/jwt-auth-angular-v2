@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-users',
@@ -7,13 +8,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  usuarios: any[] = [];
 
-  constructor(private http: HttpClient) {}
+ usuarios: any[] = [];
 
-  ngOnInit() {
-    this.http.get<any[]>('http://localhost:5001/api/users').subscribe(data => {
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.userService.getAllUsers().subscribe(data => {
       this.usuarios = data;
     });
-  }
+    }
 }
